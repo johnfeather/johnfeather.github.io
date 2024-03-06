@@ -1,0 +1,55 @@
+/* Hide specific elements in the Notion UI */
+#page-index .notion-header__title-wrapper,
+.notion-dropdown__button svg:first-of-type,
+.notion-dropdown__menu-header,
+.notion-dropdown__option-icon,
+.notion-toggle.bg-brown {
+  display: none !important;
+}
+
+/* Style adjustments for text wrapping in list items and titles */
+.notion-collection-list__item-property .notion-semantic-string,
+.notion-property.notion-property__title .notion-semantic-string span {
+  white-space: pre-wrap !important;
+}
+
+/* Root CSS variables for theme customization */
+:root {
+  --primary-color: #111111;
+  --color-text-default: #ffffff !important;
+  --color-bg-default: #151618 !important;
+  --button-bg-color: #ffffff !important;
+  --button-text-color: #111111 !important;
+  --list-item-border: #e1e9ff;
+  --list-item-hover: #f1f5ff;
+  --page-width: 1280px;
+  --button-rounding: 5px !important;
+  --scrollbar-color: #383838 !important;
+  --color-border-default: var(--dark-glass) !important;
+  --dark-glass: rgba(255, 255, 255, 0.05) !important;
+  --color-text-default-light: #ffffff !important;
+}
+
+/* Body background with linear gradient and antialiasing for smoother text */
+body {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+  background:
+    linear-gradient(90deg, #151618 15px, transparent 1%) 50%,
+    linear-gradient(#151618 15px, #3e4146 1%) 0,
+    hsla(0, 0%, 100%, 0.16) !important;
+  background-size: 16px 16px !important;
+}
+
+/* Styles for dropdown options and images within Notion */
+.notion-dropdown__option.active {
+  background: var(--dark-glass) !important;
+}
+
+.notion-image img {
+  border-radius: 20px !important;
+}
+
+/* Additional styles for headings, cards, and dropdown menus */
+/* ...Additional styles would continue here, following the same format for clarity... */
