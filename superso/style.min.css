@@ -95,8 +95,178 @@ body {
   background-size: 16px 16px !important;
 }
 
-/* Additional specific styles for Notion components */
-/* ...Additional styles continue here, following the same format for clarity... */
+/* Dropdown menu styling */
+.notion-dropdown__menu {
+  border-radius: 8px !important;
+  transform: none !important;
+  left: auto !important;
+  top: auto !important;
+  box-shadow: 0 10px 20px -10px rgb(0 0 0 / 12%) !important;
+  border: 1px solid var(--color-border-default) !important;
+  margin-top: 5px !important;
+}
 
-/* Additional styles for headings, cards, and dropdown menus */
-/* ...Additional styles would continue here, following the same format for clarity... */
+/* Dropdown option list styling */
+.notion-dropdown__option-list {
+  padding: 0 !important;
+  flex-wrap: wrap !important;
+}
+
+/* Individual dropdown option styling */
+.notion-dropdown__option {
+  padding: 5px 16px !important;
+  height: 50px !important;
+  margin: 10px;
+  transition: 0.2s ease-out !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 11px !important;
+  transition:
+    background 0.6s,
+    border 0.1s ease-in !important;
+}
+
+/* Dropdown button and option text styling */
+.notion-dropdown__button-title,
+.notion-dropdown__option p {
+  font-size: 16px !important;
+}
+
+/* Hover effects for dropdown button */
+.notion-dropdown__button:hover {
+  background: 0 0 !important;
+}
+
+/* Media queries for dropdown adjustments */
+@media all and (min-width: 624px) {
+  .notion-dropdown__button,
+  .notion-dropdown__menu-header {
+    display: none !important;
+  }
+
+  .notion-dropdown__menu.initial-state {
+    z-index: 1 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .notion-dropdown__menu.animate-in,
+  .notion-dropdown__menu.animate-in.animate-out,
+  .notion-dropdown__menu.animate-out {
+    animation: none !important;
+  }
+
+  .notion-dropdown__menu {
+    background: 0 0 !important;
+    box-shadow: unset !important;
+    transform: none !important;
+    position: relative !important;
+    border: none !important;
+  }
+
+  .notion-dropdown__menu-wrapper {
+    margin-bottom: 0 !important;
+    position: relative !important;
+  }
+
+  .notion-dropdown__option:hover {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: #2d2f30 !important;
+  }
+
+  .notion-dropdown__option:hover p,
+  .notion-dropdown__option:hover svg {
+    color: #fff !important;
+  }
+
+  .notion-dropdown__option-list {
+    display: flex !important;
+    padding: 0 !important;
+    margin-left: -10px !important;
+    justify-content: flex-start !important;
+  }
+
+  .notion-dropdown__option.active-filter {
+    background: var(--button-bg-color) !important;
+    border: var(--button-bg-color) !important;
+  }
+
+  .notion-dropdown__option.active-filter p {
+    color: var(--button-text-color) !important;
+  }
+}
+
+/* Styles for super-footer and super-navbar */
+.super-footer,
+.super-footer:hover,
+.super-navbar,
+.super-navbar:hover {
+  transition: box-shadow 0.2s ease-in-out !important;
+}
+
+.super-navbar__logo {
+  padding: 0 8px;
+}
+
+.max-width {
+  max-width: var(--page-width) !important;
+}
+
+#page-setup-guide .max-width {
+  max-width: 900px !important;
+}
+
+.notion-root
+  .notion-text
+  .notion-text__content
+  .notion-semantic-string
+  span
+  strong
+  .notion-link,
+.notion-text
+  .notion-text__content
+  .notion-semantic-string
+  span
+  .notion-link
+  strong {
+  margin: 20px -5px !important;
+  padding: 10px 12px !important;
+  border-radius: var(--button-rounding) !important;
+  opacity: 1 !important;
+  font-weight: 400 !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  transition: background 0.2s ease-in-out !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: #151618 !important;
+  color: #fff !important;
+}
+
+.notion-link {
+  opacity: 1 !important;
+}
+
+.notion-link:hover {
+  opacity: 0.7 !important;
+}
+
+/* Additional styles for collection cards, navbar, footers, etc. */
+/* Add further details for each class or ID as needed for your design requirements */
+
+@media all and (max-width: 624px) {
+  /* Responsive styles for super-footer and super-navbar */
+  .super-footer,
+  .super-navbar {
+    width: calc(100% - 50px) !important;
+  }
+
+  .super-navbar {
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+  }
+
+  .super-footer {
+    margin: 0 20px !important;
+  }
+
+  /* Additional responsive styles as needed */
+}
